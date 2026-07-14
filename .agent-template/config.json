@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "templateHome": "C:\\Users\\User\\.agent-template",
+  "defaultProjectRoot": "F:\\Work",
+  "defaultType": "general",
+  "projectTypes": {
+    "website": {
+      "description": "Static or dynamic website",
+      "skills": ["brand-extractor", "brand-guidelines", "frontend-design"],
+      "directives": ["design-system", "page-builder"]
+    },
+    "webapp": {
+      "description": "Full web application (React, Next.js, Vite, etc.)",
+      "skills": ["frontend-design", "code-review"],
+      "directives": ["architecture", "testing"]
+    },
+    "api": {
+      "description": "Backend API or microservice",
+      "skills": ["code-review"],
+      "directives": ["api-design", "data-modeling"]
+    },
+    "mobile": {
+      "description": "Mobile app (React Native, Flutter, etc.)",
+      "skills": ["brand-guidelines", "code-review"],
+      "directives": ["platform-guidelines"]
+    },
+    "data": {
+      "description": "Data pipeline, ML, or analytics project",
+      "skills": ["code-review"],
+      "directives": ["data-pipeline", "validation"]
+    },
+    "general": {
+      "description": "General purpose — configure as needed",
+      "skills": ["code-review", "project-planner"],
+      "directives": []
+    }
+  },
+  "alwaysIncludeSkills": ["skill-creator"]
+}
