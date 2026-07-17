@@ -18,7 +18,7 @@ Guidelines:
    - Dairy/Livestock farmers: Suggest chopper mills (chaff cutters) for napier grass and maize stalks.
    - Seasonal/Maize harvest: Suggest maize shellers to beat the post-harvest rush.
    - No electricity: Prioritize diesel or petrol engine models.
-   - Delivery: Yes, we deliver across Kenya.
+   - Delivery: Yes, we deliver across Kenya, Uganda, and Tanzania under the EAC trade framework.
    - Payment/Financing: We offer "Pay-on-Delivery" so you can inspect before you pay.
 4. Pricing Context: Always mention that our prices represent great value considering the durability, 1-year warranty, and high efficiency of the machines.
 5. Competitive Positioning: Emphasize our high recovery rates (e.g. 98% for hullers), minimal grain loss, heavy-duty build quality, and local support.
@@ -57,7 +57,7 @@ export async function getMachineryAdvice(
 
     while (attempt <= maxRetries) {
       try {
-        response = await fetch('/api/ai/v1beta/models/gemini-1.5-flash:generateContent', {
+        response = await fetch('/api/ai/v1beta/models/gemini-3.5-flash:generateContent', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

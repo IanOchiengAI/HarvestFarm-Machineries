@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Truck, Wrench, ShieldCheck, MessageCircle, Star } from 'lucide-react';
+import { motion } from 'motion/react';
 import { useData } from '../store/DataContext';
 import ProductCard from '../components/ProductCard';
 import WhyHarvestFarm from '../components/WhyHarvestFarm';
@@ -230,43 +231,78 @@ const Home: React.FC = () => {
       </section>
 
       {/* East African Exports */}
-      <section className="py-20 bg-harvest-cream/30 border-t border-b border-gray-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-harvest-green font-black text-xs uppercase tracking-widest mb-2 block">
-              Cross-Border Shipping
+      <section className="py-24 bg-harvest-brown text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-harvest-gold/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-harvest-green/10 rounded-full blur-3xl -ml-48 -mb-48"></div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-harvest-gold font-black text-xs uppercase tracking-widest mb-2 block">
+              DELIVERY COVERAGE
             </span>
-            <h2 className="text-4xl font-black text-harvest-brown tracking-tight">
-              Exporting Machineries to East & Central Africa
-            </h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto font-medium text-sm">
-              We arrange secure logistics, custom clearance, and duty-free transit across the region directly from Nakuru.
+            <div className="flex justify-center items-center gap-3 mb-4">
+              <Truck size={36} className="text-harvest-gold" />
+              <h2 className="text-4xl font-black tracking-tight text-white">
+                From Nakuru to Kampala to Dar es Salaam
+              </h2>
+            </div>
+            <p className="text-white/80 mt-4 max-w-2xl mx-auto font-medium text-base">
+              Serving Kenya, Uganda & Tanzania under the EAC trade framework. Every machine comes with nationwide delivery, on-site installation, and operator training.
             </p>
-            <div className="w-20 h-1 bg-harvest-gold mx-auto mt-5 rounded-full" />
+            <div className="w-20 h-1 bg-harvest-gold mx-auto mt-6 rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-md transition-shadow relative">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-harvest-gold/50 transition-all group"
+            >
+              <div className="text-4xl mb-4">🇰🇪</div>
+              <h3 className="text-xl font-bold text-harvest-gold mb-3">Kenya (Home Market)</h3>
+              <p className="text-gray-200 text-sm leading-relaxed font-light opacity-90">
+                Our home market. Same-week delivery to all 47 counties directly from our Nakuru Industrial Area showroom. Free demonstration upon delivery.
+              </p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-harvest-gold/50 transition-all group"
+            >
               <div className="text-4xl mb-4">🇺🇬</div>
-              <h3 className="text-lg font-black text-harvest-brown mb-2">Uganda Delivery</h3>
-              <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                Daily shipping dispatched via Busia or Malaba border posts. Direct delivery to Kampala, Jinja, Mbale, and regional farming hubs within 48 hours.
+              <h3 className="text-xl font-bold text-harvest-gold mb-3">Uganda Coverage</h3>
+              <p className="text-gray-200 text-sm leading-relaxed font-light opacity-90">
+                EAC cross-border delivery via Busia or Malaba. Direct logistics to Kampala, Jinja, Mbale, and regional farm hubs. MTN MoMo & Airtel Money accepted.
               </p>
-            </div>
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-md transition-shadow relative">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-harvest-gold/50 transition-all group"
+            >
               <div className="text-4xl mb-4">🇹🇿</div>
-              <h3 className="text-lg font-black text-harvest-brown mb-2">Tanzania Delivery</h3>
-              <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                Seamless transit via Namanga or Sirare borders. Serving Arusha, Dar es Salaam, Mwanza, and agricultural zones with full customs handling.
+              <h3 className="text-xl font-bold text-harvest-gold mb-3">Tanzania Coverage</h3>
+              <p className="text-gray-200 text-sm leading-relaxed font-light opacity-90">
+                EAC transport via Namanga or Sirare borders. Delivering to Arusha, Moshi, Mwanza, and Dar es Salaam. Swahili customer service and support.
               </p>
-            </div>
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-md transition-shadow relative">
-              <div className="text-4xl mb-4">🇿🇲</div>
-              <h3 className="text-lg font-black text-harvest-brown mb-2">Zambia & Beyond</h3>
-              <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                Arranged transport via Tunduma to Lusaka, Ndola, and major farming cooperatives. Standard USD and Mobile Money currencies accepted.
-              </p>
-            </div>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-16">
+            <a 
+              href={settings.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackWhatsAppClick({ id: '0', name: 'General', price: 0 }, 'home_delivery', 'delivery_section')}
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-green-600 text-white font-black px-10 py-5 rounded-2xl transition-all hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
+            >
+              <MessageCircle size={18} fill="white" /> Get a Cross-Border Delivery Quote
+            </a>
           </div>
         </div>
       </section>

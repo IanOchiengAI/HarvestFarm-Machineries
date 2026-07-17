@@ -42,7 +42,7 @@ const App: React.FC = () => {
     },
     areaServed: 'Kenya',
     priceRange: 'KSh 45,000 - KSh 500,000',
-    sameAs: ['https://wa.me/254713812392'],
+    sameAs: ['https://wa.me/254780037335'],
   };
 
   const websiteSchema = {
