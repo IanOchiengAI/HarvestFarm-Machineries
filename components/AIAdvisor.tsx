@@ -108,7 +108,7 @@ const AIAdvisor: React.FC = () => {
                   <Tractor size={20} />
                 </div>
                 <div>
-                  <h3 className="font-black text-xs uppercase tracking-widest leading-none">Mkulima Juma</h3>
+                  <h3 className="font-black text-xs uppercase tracking-widest leading-none">Mkulima</h3>
                   <div className="flex items-center gap-1.5 mt-1">
                     <span className="w-2 h-2 bg-harvest-gold rounded-full animate-pulse" />
                     <span className="text-[9px] text-gray-300 font-bold uppercase tracking-tighter">Wise Farmer & Guide</span>
@@ -135,7 +135,7 @@ const AIAdvisor: React.FC = () => {
                   </div>
                   <h4 className="font-black text-harvest-brown mb-2 text-xl uppercase tracking-tight">Sema Mkulima!</h4>
                   <p className="text-sm text-gray-500 font-medium leading-relaxed">
-                    Hello! I'm Juma, a farmer from Nakuru. Having worked the shamba for years, I know these machines inside out. How can I help you choose the right one today?
+                    Hello! I'm Mkulima, your guide from Nakuru. Having worked the shamba for years, I know these machines inside out. How can I help you choose the right one today?
                   </p>
                   <div className="mt-6 flex flex-wrap gap-2 justify-center">
                     {["What machine do I need for a milling business?", "Best equipment under KSh 100,000?", "Do you deliver to my county?", "How does pay-on-delivery work?"].map((q) => (
@@ -196,7 +196,7 @@ const AIAdvisor: React.FC = () => {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Tupa swali, mkulima... (Ask Juma)"
+                  placeholder="Tupa swali, mkulima... (Ask Mkulima)"
                   className="flex-grow bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-harvest-green font-medium"
                 />
                 <button 
