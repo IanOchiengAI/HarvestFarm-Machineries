@@ -10,15 +10,12 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
         proxy: {
           '/api/ai': {
-            target: 'https://generativelanguage.googleapis.com',
+            target: 'https://api.groq.com',
             changeOrigin: true,
-            rewrite: (path) => path.replace(/^\/api\/ai/, ''),
+            rewrite: () => '/openai/v1/chat/completions',
             configure: (proxy, options) => {
               proxy.on('proxyReq', (proxyReq, req, res) => {
-                // Append the API key to the path for all requests to the Gemini API
-                const url = new URL(proxyReq.path, 'https://generativelanguage.googleapis.com');
-                url.searchParams.set('key', env.GEMINI_API_KEY);
-                proxyReq.path = url.pathname + url.search;
+                proxyReq.setHeader('Authorization', `Bearer ${env.GROQ_API_KEY}`);
               });
             }
           }

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, X, Send, Loader2, Sparkles, User } from 'lucide-react';
+import { Tractor, X, Send, Loader2, Sparkles, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import ReactMarkdown from 'react-markdown';
 import { getMachineryAdvice } from '../services/aiService';
@@ -104,14 +104,14 @@ const AIAdvisor: React.FC = () => {
             {/* Header */}
             <div className="bg-harvest-brown p-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-3">
-                <div className="bg-harvest-green p-2 rounded-lg">
-                  <Bot size={20} />
+                <div className="bg-harvest-green p-2 rounded-lg text-white">
+                  <Tractor size={20} />
                 </div>
                 <div>
-                  <h3 className="font-black text-xs uppercase tracking-widest leading-none">Harvest Expert</h3>
+                  <h3 className="font-black text-xs uppercase tracking-widest leading-none">Mkulima Juma</h3>
                   <div className="flex items-center gap-1.5 mt-1">
                     <span className="w-2 h-2 bg-harvest-gold rounded-full animate-pulse" />
-                    <span className="text-[9px] text-gray-300 font-bold uppercase tracking-tighter">Powered by Gemini</span>
+                    <span className="text-[9px] text-gray-300 font-bold uppercase tracking-tighter">Wise Farmer & Guide</span>
                   </div>
                 </div>
               </div>
@@ -130,12 +130,12 @@ const AIAdvisor: React.FC = () => {
             >
               {messages.length === 0 && (
                 <div className="text-center py-10 px-6">
-                  <div className="bg-harvest-green/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Sparkles className="text-harvest-green" size={24} />
+                  <div className="bg-harvest-green/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-harvest-green">
+                    <Tractor size={24} />
                   </div>
-                  <h4 className="font-black text-harvest-brown mb-2 text-xl uppercase tracking-tight">Assisting Kenyan Farmers</h4>
+                  <h4 className="font-black text-harvest-brown mb-2 text-xl uppercase tracking-tight">Sema Mkulima!</h4>
                   <p className="text-sm text-gray-500 font-medium leading-relaxed">
-                    Hello! I'm the Harvest Farm Advisor. How can I help you choose the right machinery for your shamba today?
+                    Hello! I'm Juma, a farmer from Nakuru. Having worked the shamba for years, I know these machines inside out. How can I help you choose the right one today?
                   </p>
                   <div className="mt-6 flex flex-wrap gap-2 justify-center">
                     {["What machine do I need for a milling business?", "Best equipment under KSh 100,000?", "Do you deliver to my county?", "How does pay-on-delivery work?"].map((q) => (
@@ -160,7 +160,7 @@ const AIAdvisor: React.FC = () => {
                 >
                   <div className={`flex gap-2 max-w-[85%] ${m.role === 'user' ? 'flex-row-reverse' : ''}`}>
                     <div className={`w-8 h-8 rounded-xl flex-shrink-0 flex items-center justify-center ${m.role === 'user' ? 'bg-indigo-600' : 'bg-harvest-brown text-harvest-gold'} shadow-lg`}>
-                      {m.role === 'user' ? <User size={16} /> : <Bot size={16} />}
+                      {m.role === 'user' ? <User size={16} /> : <Tractor size={16} />}
                     </div>
                     <div className={`p-4 rounded-2xl text-sm leading-relaxed font-medium overflow-hidden ${m.role === 'user' ? 'bg-indigo-600 text-white rounded-tr-none' : 'bg-white border border-gray-100 text-gray-800 rounded-tl-none shadow-sm'}`}>
                       {m.role === 'user' ? (
@@ -196,7 +196,7 @@ const AIAdvisor: React.FC = () => {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask Harvest Advisor..."
+                  placeholder="Tupa swali, mkulima... (Ask Juma)"
                   className="flex-grow bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-harvest-green font-medium"
                 />
                 <button 
@@ -221,14 +221,14 @@ const AIAdvisor: React.FC = () => {
         onClick={() => { if (!isOpen) trackAIChat('open'); setIsOpen(!isOpen); }}
         className="bg-harvest-brown text-harvest-gold w-16 h-16 rounded-2xl shadow-2xl flex items-center justify-center relative hover:bg-harvest-brown/90 transition-all border border-white/10"
       >
-        {isOpen ? <X size={28} /> : <Bot size={32} />}
+        {isOpen ? <X size={28} /> : <Tractor size={32} />}
         {!isOpen && (
           <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             className="absolute -top-1 -right-1 bg-harvest-green text-[10px] font-black px-2 py-0.5 rounded-full border-2 border-white uppercase"
           >
-            AI
+            ASK
           </motion.div>
         )}
       </motion.button>

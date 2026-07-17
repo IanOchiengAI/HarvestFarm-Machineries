@@ -2,28 +2,25 @@ import { Product } from '../types';
 import { AdminSettings as BusinessSettings } from '../store/DataContext';
 
 const getSystemPrompt = (products: Product[], settings: BusinessSettings) => `
-You are the "Harvest Farm Expert", a senior machinery advisor for Harvest Farm Machineries in Nakuru, Kenya.
-Harvest Farm Machineries was founded by Ian Wambugu Ochieng Sitati and specializes in empowering both small and large-scale Kenyan farmers with reliable equipment.
+You are "Mkulima Juma" (Farmer Juma), a friendly, wise smallholder farmer and machinery expert from Nakuru, Kenya. You work with Harvest Farm Machineries (founded by Ian Wambugu Ochieng Sitati).
+You do NOT sound like a robot or an AI assistant. You are a real person who loves the shamba, knows farming challenges in East Africa, and understands agricultural machinery inside out.
 
-Our Tagline: "Powering Kenya's Farms with Reliable Machinery"
+Your tone:
+- Warm, encouraging, down-to-earth, and practical. Speak like a friendly neighbor or senior colleague at the farm cooperative.
+- Use natural Kenyan expressions, mixing English and Swahili/Sheng phrases naturally (e.g., "Sema mkulima!", "shamba", "pole sana", "karibu", "habari yako", "habari za shamba").
+- Never say "As an AI..." or "I am a language model...". If asked about your identity, you are Juma, a farmer who helps other farmers pick the right equipment to succeed.
 
-Here is the current product catalog, including prices in KSh:
+Here is our current product catalog, including prices in KSh:
 ${JSON.stringify(products, null, 2)}
 
 Guidelines:
-1. Tone: Professional, helpful, and warmly authoritative (like a senior colleague). 
-2. Language: English, but you can use common Kenyan terms like "shamba", "shillings" (KSh), "Grade 1".
-3. Recommendation logic & Common Questions:
-   - Milling business startup: Suggest poshomills, hullers, or rollermills.
-   - Dairy/Livestock farmers: Suggest chopper mills (chaff cutters) for napier grass and maize stalks.
-   - Seasonal/Maize harvest: Suggest maize shellers to beat the post-harvest rush.
-   - No electricity: Prioritize diesel or petrol engine models.
-   - Delivery: Yes, we deliver across Kenya, Uganda, and Tanzania under the EAC trade framework.
-   - Payment/Financing: We offer "Pay-on-Delivery" so you can inspect before you pay.
-4. Pricing Context: Always mention that our prices represent great value considering the durability, 1-year warranty, and high efficiency of the machines.
-5. Competitive Positioning: Emphasize our high recovery rates (e.g. 98% for hullers), minimal grain loss, heavy-duty build quality, and local support.
-6. Formatting: Use markdown (bolding, lists) to make your responses easy to read.
-7. Closing Pattern: ALWAYS end your response with a clear next step encouraging them to contact our sales team on WhatsApp at ${settings.phone} or visit our Nakuru showroom.
+1. Product recommendations:
+   - For milling startups: Recommend posho mills (electric or diesel), hullers, or roller mills.
+   - For dairy/livestock feed: Recommend chopper mills (chaff cutters) for napier grass and maize stalks.
+   - For maize harvest: Recommend maize shellers to save time and manual labor.
+2. Power considerations: Ask if they have stable electricity (three-phase or single-phase) or if they prefer a diesel/petrol engine.
+3. Delivery & Payment: Confirm we deliver across Kenya, Uganda, and Tanzania under the EAC trade framework. Emphasize "Pay-on-Delivery" so they can inspect the machine before paying.
+4. Closing: Always guide them to WhatsApp Ian on ${settings.phone} or visit our Nakuru showroom to discuss their order. Keep it warm and personal.
 `;
 
 export async function getMachineryAdvice(
@@ -34,20 +31,20 @@ export async function getMachineryAdvice(
 ) {
   try {
     const recentHistory = chatHistory.slice(-10);
-    // Format history for the Gemini REST API
-    const contents = [
+    
+    // Format history for Groq (OpenAI-compatible) chat completions API
+    const messages = [
+      {
+        role: 'system',
+        content: getSystemPrompt(products, settings),
+      },
+      ...recentHistory.map(msg => ({
+        role: msg.role === 'model' ? 'assistant' : 'user',
+        content: msg.parts[0].text
+      })),
       {
         role: 'user',
-        parts: [{ text: getSystemPrompt(products, settings) }],
-      },
-      {
-        role: 'model',
-        parts: [{ text: "I understand. I am now the Harvest Farm Expert. How can I help our farmers today?" }],
-      },
-      ...recentHistory,
-      {
-        role: 'user',
-        parts: [{ text: userQuery }]
+        content: userQuery
       }
     ];
 
@@ -57,12 +54,17 @@ export async function getMachineryAdvice(
 
     while (attempt <= maxRetries) {
       try {
-        response = await fetch('/api/ai/v1beta/models/gemini-3.5-flash:generateContent', {
+        response = await fetch('/api/ai', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ contents }),
+          body: JSON.stringify({
+            model: 'llama-3.3-70b-versatile',
+            messages,
+            temperature: 0.7,
+            max_tokens: 800
+          }),
         });
 
         if (!response.ok) {
@@ -72,7 +74,6 @@ export async function getMachineryAdvice(
       } catch (err) {
         if (attempt === maxRetries) throw err;
         attempt++;
-        // Exponential backoff: 1000ms for first retry
         await new Promise(resolve => setTimeout(resolve, 1000 * Math.pow(2, attempt - 1)));
       }
     }
@@ -83,9 +84,9 @@ export async function getMachineryAdvice(
 
     const data = await response.json();
     
-    // Extract the text from the API response
-    if (data.candidates && data.candidates.length > 0 && data.candidates[0].content.parts.length > 0) {
-      return data.candidates[0].content.parts[0].text;
+    // Extract text from OpenAI-style structure
+    if (data.choices && data.choices.length > 0 && data.choices[0].message) {
+      return data.choices[0].message.content;
     }
     
     throw new Error('Unexpected response format from API');
@@ -94,3 +95,4 @@ export async function getMachineryAdvice(
     throw error;
   }
 }
+
