@@ -182,7 +182,7 @@ const Shop: React.FC = () => {
             </div>
 
             {/* Mobile category tabs — horizontal scroll pills */}
-            <div className="md:hidden mb-8 -mx-4 px-4 overflow-x-auto scroll-hide">
+            <div className="md:hidden mb-4 -mx-4 px-4 overflow-x-auto scroll-hide">
               <div className="flex gap-2 pb-2">
                 {categoryNames.map(cat => (
                   <button
@@ -195,6 +195,25 @@ const Shop: React.FC = () => {
                     }`}
                   >
                     {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile price filter — horizontal scroll pills */}
+            <div className="md:hidden mb-8 -mx-4 px-4 overflow-x-auto scroll-hide">
+              <div className="flex gap-2 pb-2">
+                {PRICE_TIERS.map(tier => (
+                  <button
+                    key={tier.value}
+                    onClick={() => updateParam('price', tier.value)}
+                    className={`flex-shrink-0 px-4 py-2.5 rounded-full text-xs font-black uppercase tracking-wider whitespace-nowrap transition-all ${
+                      priceTier === tier.value
+                        ? 'bg-harvest-green text-white shadow-md'
+                        : 'bg-white border border-gray-200 text-gray-600'
+                    }`}
+                  >
+                    {tier.label}
                   </button>
                 ))}
               </div>

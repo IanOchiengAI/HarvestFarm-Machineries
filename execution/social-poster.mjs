@@ -151,10 +151,14 @@ async function run() {
   }
   
   // 4. Implement Jitter
-  const minJitter = 10;
-  const maxJitter = 45;
-  const jitterSecs = Math.floor(Math.random() * (maxJitter - minJitter + 1)) + minJitter;
-  console.log(`🎲 Jitter: waiting ${jitterSecs} seconds before posting...`);
+  // Note: We use minutes, but cap it at a max of 4 minutes. 
+  // Why? GitHub Actions gives you 2,000 free minutes per month. 
+  // If we wait 45 minutes per post, twice a day, you will run out of free minutes!
+  // A 1 to 4 minute random delay is more than enough to look completely organic to Facebook.
+  const minJitterMinutes = 1;
+  const maxJitterMinutes = 4;
+  const jitterSecs = Math.floor(Math.random() * ((maxJitterMinutes - minJitterMinutes) * 60 + 59)) + (minJitterMinutes * 60);
+  console.log(`🎲 Jitter: waiting ${Math.floor(jitterSecs / 60)}m ${jitterSecs % 60}s before posting...`);
   await new Promise(r => setTimeout(r, jitterSecs * 1000));
   
   // 5. Post to Facebook

@@ -150,7 +150,7 @@ function organizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}/og-image.png`,
-    telephone: '+254780037335',
+    telephone: '+254713812392',
     email: 'info@harvestfarm.co.ke',
     address: {
       '@type': 'PostalAddress',
@@ -159,7 +159,7 @@ function organizationSchema() {
     },
     areaServed: 'Kenya',
     priceRange: 'KSh 45,000 - KSh 500,000',
-    sameAs: ['https://wa.me/254780037335'],
+    sameAs: ['https://wa.me/254713812392'],
   };
 }
 
@@ -247,7 +247,7 @@ function homeBody() {
   return `<section>
     <h1>Harvest Farm Machineries Nakuru</h1>
     <p>Powering Kenya's farms with reliable machinery. Buy posho mills, hullers, chopper mills, maize shellers, chaffcutters, animal feed machines, crop sprayers, and block machines from Nakuru.</p>
-    <p>Call or WhatsApp +254780037335 for machine advice, delivery, installation, and training.</p>
+    <p>Call or WhatsApp +254713812392 for machine advice, delivery, installation, and training.</p>
     <h2>Shop by Category</h2>
     <ul>${CATEGORIES.map((category) => `<li><a href="${escapeHtml(categoryPath(category.name))}">${escapeHtml(category.name)}</a></li>`).join('')}</ul>
     <h2>Best Selling Machines</h2>
@@ -412,9 +412,9 @@ writeRoute(
   pageHtml({
     title: 'Contact Us | Visit Our Showroom in Nakuru | Harvest Farm Machineries',
     description:
-      'Call +254780037335 or visit the Harvest Farm Machineries showroom in Nakuru CBD for expert advice on posho mills, hullers, and farm equipment.',
+      'Call +254713812392 or visit the Harvest Farm Machineries showroom in Nakuru CBD for expert advice on posho mills, hullers, and farm equipment.',
     routePath: '/contact',
-    body: `<section><h1>Contact Harvest Farm Machineries</h1><p>Call or WhatsApp +254780037335. Visit Harvest Farm Machineries in Nakuru CBD, Kenya for posho mills, hullers, maize shellers, chopper mills, and farm equipment advice.</p></section>`,
+    body: `<section><h1>Contact Harvest Farm Machineries</h1><p>Call or WhatsApp +254713812392. Visit Harvest Farm Machineries in Nakuru CBD, Kenya for posho mills, hullers, maize shellers, chopper mills, and farm equipment advice.</p></section>`,
     schemas: [organizationSchema(), breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }])],
   })
 );

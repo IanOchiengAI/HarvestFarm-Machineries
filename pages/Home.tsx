@@ -38,8 +38,8 @@ const Home: React.FC = () => {
       <section className="relative h-[650px] bg-harvest-brown flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=1920"
-            alt="Harvest Farm Machineries agricultural equipment in action in Kenya" 
+            src="https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784557164/7.5Hp_Electric_Choppermills_fxotol.png"
+            alt="Harvest Farm Machineries 7.5HP Electric Choppermill – farm machinery sold in Nakuru Kenya" 
             className="w-full h-full object-cover opacity-75 animate-ken-burns"
             fetchPriority="high"
             onError={(e) => {

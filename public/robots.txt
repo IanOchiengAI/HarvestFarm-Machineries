@@ -1,4 +1,33 @@
+# HarvestFarm Machineries — Nakuru, Kenya
+# https://harvestfarmnk.co.ke
+
 User-agent: *
 Allow: /
 
+# Explicitly allow AI assistant crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://harvestfarmnk.co.ke/sitemap.xml
+Sitemap: https://harvestfarmnk.co.ke/llms.txt

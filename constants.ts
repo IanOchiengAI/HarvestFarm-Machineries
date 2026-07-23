@@ -5,15 +5,15 @@ export const WHATSAPP_LINK = `https://wa.me/254713812392`;
 export const LOCATION_LINK = "https://maps.google.com/?q=Nakuru+Kenya+Harvest+Farm+Machinery";
 
 export const CATEGORIES: Category[] = [
-  { id: 'posho-mills', name: 'Posho Mills', image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=600' },
-  { id: 'hullers', name: 'Hullers', image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=600' },
-  { id: 'chopper-mills', name: 'Chopper Mills', image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=600' },
-  { id: 'roller-mills', name: 'Roller Mills', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600' },
-  { id: 'maize-shellers', name: 'Maize Shellers', image: 'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&q=80&w=600' },
-  { id: 'animal-feed-machines', name: 'Animal Feed Machines', image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=600' },
+  { id: 'posho-mills', name: 'Posho Mills', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png' },
+  { id: 'hullers', name: 'Hullers', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png' },
+  { id: 'chopper-mills', name: 'Chopper Mills', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784557164/7.5Hp_Electric_Choppermills_fxotol.png' },
+  { id: 'roller-mills', name: 'Roller Mills', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784550731/rollermills_kyhrja.png' },
+  { id: 'maize-shellers', name: 'Maize Shellers', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551181/maize_shellers_2_visjp1.png' },
+  { id: 'animal-feed-machines', name: 'Animal Feed Machines', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png' },
   { id: 'crop-spraying', name: 'Crop Spraying', image: '/trolley-sprayer.jpg' },
   { id: 'block-machines', name: 'Block Machines', image: '/electric-solid-block-making-machine.jpg' },
-  { id: 'chaffcutters', name: 'Chaffcutters', image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=600' },
+  { id: 'chaffcutters', name: 'Chaffcutters', image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551967/electric_Chuffcutter_ys1egh.png' },
 ];
 
 export const PRODUCTS: Product[] = [
@@ -60,7 +60,7 @@ export const PRODUCTS: Product[] = [
     name: 'Electric Hollow Block-Making Machine',
     category: 'Block Machines',
     price: 260000,
-    image: 'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&q=80&w=800',
+    image: '/electric-solid-block-making-machine.jpg',
     description: 'Robust electric hollow concrete block-making machine. Specifically optimized for standard commercial hollow building blocks, delivering consistent dimensional accuracy and superior compression density.',
     specs: {
       'Block Type': 'Hollow Concrete Blocks',
@@ -78,7 +78,7 @@ export const PRODUCTS: Product[] = [
     name: 'Electric Block-Making Machine (PAIR)',
     category: 'Block Machines',
     price: 500000,
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800',
+    image: '/electric-solid-block-making-machine.jpg',
     description: 'Double production setup featuring two synchronized high-performance electric block-making units. Increases commercial yard throughput and scales masonry supply operations efficiently. Bundle saving included.',
     specs: {
       'Units Included': 'Two (2) complete block-making machines',
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
     name: '7.5 HP Electric Choppermill',
     category: 'Chopper Mills',
     price: 70000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784557164/7.5Hp_Electric_Choppermills_fxotol.png',
     description: 'High-performance commercial chopper mill equipped with a powerful 7.5 HP electric motor. Easily chops Napier grass and silage, while crushing dried grains for comprehensive stock feed preparation.',
     specs: {
       'Motor': '7.5 HP Heavy Duty Electric Motor',
@@ -113,7 +113,7 @@ export const PRODUCTS: Product[] = [
     name: '3HP Electric Choppermill',
     category: 'Chopper Mills',
     price: 50000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784557164/7.5Hp_Electric_Choppermills_fxotol.png',
     description: 'Efficient, compact agricultural chopper mill powered by a 3HP single-phase electric motor. Ideal for small-scale dairy shambas looking to simplify Napier grass chopping and maize crushing.',
     specs: {
       'Motor': '3 HP Single-Phase Electric Motor',
@@ -129,7 +129,7 @@ export const PRODUCTS: Product[] = [
     name: 'Electric Car Wash Machine',
     category: 'Crop Spraying',
     price: 75000,
-    image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'Commercial grade high-pressure electric car wash machine. Mounted on a heavy-duty cart with pneumatic wheels, designed for commercial car washes, agricultural cleaning, and dairy parlour sanitation.',
     specs: {
       'Motor': 'High-Efficiency Electric Motor',
@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
     name: 'GAM Unga No.2 Poshomill',
     category: 'Posho Mills',
     price: 100000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'The standard choice for commercial milling business. The GAM Unga No.2 hammer mill crushes grains into fine sifted maize meal in a single pass. Designed for reliability in busy Rift Valley market centres.',
     specs: {
       'Category': 'Commercial Poshomill',
@@ -164,7 +164,7 @@ export const PRODUCTS: Product[] = [
     name: 'Duo Choppermill (Petrol)',
     category: 'Chopper Mills',
     price: 60000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png',
     description: 'Dual-purpose chopper mill powered by an 8HP petrol engine. Chops green crops like Napier grass and stalks into silage, while simultaneously grinding dry corn cobs and grains into customized animal feeds.',
     specs: {
       'Engine': '8HP Petrol Engine',
@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
     name: 'Duo Choppermill (Diesel)',
     category: 'Chopper Mills',
     price: 110000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png',
     description: 'Heavy-duty diesel powered duo choppermill. Equipped with a high-torque 10HP diesel engine for superior fuel economy and relentless operational capacity, designed for large dairy estates.',
     specs: {
       'Engine': '10HP Fuel-Efficient Diesel Engine',
@@ -196,7 +196,7 @@ export const PRODUCTS: Product[] = [
     name: 'Maize Sheller',
     category: 'Maize Shellers',
     price: 45000,
-    image: 'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551181/maize_shellers_2_visjp1.png',
     description: 'Fast, efficient maize sheller designed to shell dry maize and separate the cobs cleanly. Saves time and eliminates labor-intensive manual shelling during the harvest rush.',
     specs: {
       'Capacity': '15-20 Bags of maize per Hour',
@@ -213,7 +213,7 @@ export const PRODUCTS: Product[] = [
     name: 'Feed Crusher',
     category: 'Animal Feed Machines',
     price: 65000,
-    image: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png',
     description: 'High-speed feed crusher optimized for grinding dry crops, maize kernels, sunflower hulls, and sorghum into high-nutrient livestock feeds. Essential for professional feed formulation yards.',
     specs: {
       'Motor': '5HP Electric Motor or Engine equivalent',
@@ -229,7 +229,7 @@ export const PRODUCTS: Product[] = [
     name: 'Feed Mixer',
     category: 'Animal Feed Machines',
     price: 275000,
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png',
     description: 'Industrial-grade vertical animal feed mixer. Ensures perfectly homogeneous blending of dry grains, mineral concentrates, and silage mixes, maximizing dairy and poultry nutritional intake.',
     specs: {
       'Mixing Drum Capacity': '500 Kg per Batch',
@@ -245,7 +245,7 @@ export const PRODUCTS: Product[] = [
     name: 'Choppermill-Milano',
     category: 'Chopper Mills',
     price: 65000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553481/Diesel_choppermills_jkezf2.png',
     description: 'Premium chopper mill featuring the advanced Milano forage-cutting head. Painted in vibrant red and yellow, it chops silage and grinds grains with unmatched precision and speed.',
     specs: {
       'Chamber Type': 'Milano structural head',
@@ -261,7 +261,7 @@ export const PRODUCTS: Product[] = [
     name: 'Electric Chaffcutter',
     category: 'Chaffcutters',
     price: 53000,
-    image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551967/electric_Chuffcutter_ys1egh.png',
     description: 'Classic high-torque electric chaffcutter mounted on a sturdy tripod stand. Features a heavy circular cast-iron flywheel with 3 precision cutting blades, optimized for clean forage slicing.',
     specs: {
       'Power Source': '3HP High-Torque Electric Motor',
@@ -277,7 +277,7 @@ export const PRODUCTS: Product[] = [
     name: '3 Blade Petrol Chaffcutter',
     category: 'Chaffcutters',
     price: 50000,
-    image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551967/electric_Chuffcutter_ys1egh.png',
     description: 'Independent 3-blade forage cutter powered by an efficient 5HP petrol engine. Designed for farms without electric hookups, enabling premium quality silage cutting directly in the shamba.',
     specs: {
       'Engine': '5HP Petrol Engine',
@@ -293,7 +293,7 @@ export const PRODUCTS: Product[] = [
     name: '2 Blade Petrol Chaffcutter',
     category: 'Chaffcutters',
     price: 48000,
-    image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551967/electric_Chuffcutter_ys1egh.png',
     description: 'Highly economical 2-blade petrol chaffcutter. Slices through Napier grass and green forage cleanly, keeping feed prep fast and simple for smallholder dairy shambas.',
     specs: {
       'Engine': '5.5HP Petrol Engine',
@@ -308,7 +308,7 @@ export const PRODUCTS: Product[] = [
     name: 'LPG Chaffcutter',
     category: 'Chaffcutters',
     price: 65000,
-    image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551967/electric_Chuffcutter_ys1egh.png',
     description: 'Innovative and environmentally friendly chaffcutter modified to run on LPG gas cylinder fuel. Offers cleaner operations, easier keystarts, and significant fuel cost savings over standard petrol.',
     specs: {
       'Fuel Source': 'LPG Gas Cylinder connection',
@@ -324,7 +324,7 @@ export const PRODUCTS: Product[] = [
     name: 'P.T.O Choppermill',
     category: 'Chopper Mills',
     price: 110000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png',
     description: 'Tractor-driven Power Take-Off (PTO) chopper mill. Hooks up directly to standard tractor drives, enabling high-volume silage chopping and grain crushing directly in the fields.',
     specs: {
       'Power Source': 'Tractor PTO Shaft driven',
@@ -340,7 +340,7 @@ export const PRODUCTS: Product[] = [
     name: 'PTO Silage Blower',
     category: 'Chopper Mills',
     price: 130000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784555848/22Hp_Silage_Chopping_machine_w1lkeq.png',
     description: 'Heavy duty tractor-driven silage blower. Designed to shoot cut silage and forage directly into high silos or bulk silage transportation trailers with extreme speed.',
     specs: {
       'Power Source': 'Tractor PTO driven',
@@ -356,7 +356,7 @@ export const PRODUCTS: Product[] = [
     name: '22HP Diesel Silage Blower',
     category: 'Chopper Mills',
     price: 185000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784555848/22Hp_Silage_Chopping_machine_w1lkeq.png',
     description: 'Ultra-powerful silage blower powered by an independent 22HP heavy-duty diesel engine. Blows silage into elevated silos at massive capacities without needing a tractor.',
     specs: {
       'Engine': '22HP Heavy-Duty Diesel Engine',
@@ -372,7 +372,7 @@ export const PRODUCTS: Product[] = [
     name: '22HP Diesel Choppermill',
     category: 'Chopper Mills',
     price: 180000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784555848/22Hp_Silage_Chopping_machine_w1lkeq.png',
     description: 'The ultimate independent chopper mill. Utilizing an enormous 22HP diesel engine, it chops, grinds, and crushes bulk crops at commercial silage depot rates.',
     specs: {
       'Engine': '22HP High-Torque Diesel Engine',
@@ -388,7 +388,7 @@ export const PRODUCTS: Product[] = [
     name: '10HP Diesel Powered Choppermill',
     category: 'Chopper Mills',
     price: 70000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784555423/10Hp_Diesel_choppermills_mh3nla.jpg',
     description: 'Highly competitive and fuel-efficient 10HP diesel choppermill. Perfect for farmers looking for diesel durability and low running costs at an exceptionally accessible price.',
     specs: {
       'Engine': '10HP Fuel-efficient Diesel Engine',
@@ -403,7 +403,7 @@ export const PRODUCTS: Product[] = [
     name: '13HP Keystart Petrol Choppermill',
     category: 'Chopper Mills',
     price: 90000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556218/7.5Hp_Petrol_Choppermill_fpxyob.png',
     description: 'Vibrant and robust choppermill featuring a 13HP petrol engine with an electric keystart system. Eliminates pull-cord strain, providing high horsepower on demand.',
     specs: {
       'Engine': '13HP Petrol Engine',
@@ -419,7 +419,7 @@ export const PRODUCTS: Product[] = [
     name: '7.5HP Petrol Choppermill',
     category: 'Chopper Mills',
     price: 40000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556218/7.5Hp_Petrol_Choppermill_fpxyob.png',
     description: 'Vibrant, cost-effective petrol chopper mill. Driven by a 7.5HP petrol engine, it offers excellent forage chopping and crop grinding at our most accessible price point.',
     specs: {
       'Engine': '7.5HP Petrol Engine',
@@ -434,7 +434,7 @@ export const PRODUCTS: Product[] = [
     name: 'Poshomill and Huller',
     category: 'Posho Mills',
     price: 155000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'The ultimate grain milling bundle. Combines a high-efficiency maize huller and a commercial poshomill with cyclones into a coordinated, synchronized commercial setup.',
     specs: {
       'Included Units': '1 Maize Huller + 1 Poshomill unit',
@@ -451,7 +451,7 @@ export const PRODUCTS: Product[] = [
     name: 'Maize Huller',
     category: 'Hullers',
     price: 85000,
-    image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Precision maize huller designed to remove husks and bran from maize kernels prior to milling, ensuring clean white grains for premium grade sifted flour.',
     specs: {
       'Capacity': '500 - 800 Kg per Hour',
@@ -467,7 +467,7 @@ export const PRODUCTS: Product[] = [
     name: 'Huller Shaker',
     category: 'Hullers',
     price: 85000,
-    image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Advanced maize huller integrated with a reciprocating sieve shaking table. Separates hulled grains, fine dust, and broken particles instantly for exceptional output quality.',
     specs: {
       'Huller Type': 'Combined Huller and Shaker Sieve',
@@ -483,7 +483,7 @@ export const PRODUCTS: Product[] = [
     name: 'Disc Mill',
     category: 'Posho Mills',
     price: 85000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'High-speed industrial disc mill. Utilizes heavy-duty grinding discs to crush dried grains, maize, rice, and sorghum into fine flour or customized cereal feed meals.',
     specs: {
       'Milling Mechanism': 'Cast-iron grinding plates/discs',
@@ -499,7 +499,7 @@ export const PRODUCTS: Product[] = [
     name: 'Combined Rice and Disc Mill',
     category: 'Posho Mills',
     price: 130000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556861/Combined_Electric_Poshomill._hpycl1.png',
     description: 'Innovative dual-action machine combining a precision rice mill and a high-speed disc mill in a single frame. Allows commercial operators to mill rice and crush other grains on a single setup.',
     specs: {
       'Left Side': 'Precision Rice Dehusker and Polisher',
@@ -515,7 +515,7 @@ export const PRODUCTS: Product[] = [
     name: 'Degermer/Rice Mill',
     category: 'Hullers',
     price: 150000,
-    image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'High-performance grain degermer and rice polisher. Removes tough germ heads, outer hulls, and polishes rice or maize kernels to standard commercial grades.',
     specs: {
       'Primary Function': 'Corn degerming and rice polishing',
@@ -531,7 +531,7 @@ export const PRODUCTS: Product[] = [
     name: 'Rollermill Set',
     category: 'Roller Mills',
     price: 395000,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784550731/rollermills_kyhrja.png',
     description: 'Double roller mill set with dual sifter tables. Engineered to crush maize kernels between high-pressure rollers, producing top-grade, bakery-quality sifted flour that commands premium prices.',
     specs: {
       'Milling Type': 'Graduated pressure iron rollers',
@@ -548,7 +548,7 @@ export const PRODUCTS: Product[] = [
     name: 'Hybrid Poshomill',
     category: 'Posho Mills',
     price: 185000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Advanced hybrid poshomill offering selectable diesel or electric motor belt-drives. Enables operators to switch instantly based on power grid availability, ensuring 100% uptime.',
     specs: {
       'Drive System': 'Dual belt tensioner (Electric & Diesel compatible)',
@@ -564,7 +564,7 @@ export const PRODUCTS: Product[] = [
     name: 'Indian 10HP Diesel Poshomill',
     category: 'Posho Mills',
     price: 160000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: 'Heavy duty Indian-style commercial hammer mill driven by a robust 10HP diesel engine. Built with thick cast-iron components for endless commercial milling in off-grid market centres.',
     specs: {
       'Engine': '10HP High-Torque Indian Diesel Engine',
@@ -580,7 +580,7 @@ export const PRODUCTS: Product[] = [
     name: 'Diesel Poshomill',
     category: 'Posho Mills',
     price: 85000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: 'Economical diesel hammer mill driven by an 8HP diesel engine. Offers commercial-grade milling independence and low running costs at our most competitive price point.',
     specs: {
       'Engine': '8HP Fuel-efficient Diesel Engine',
@@ -595,7 +595,7 @@ export const PRODUCTS: Product[] = [
     name: 'Combined Electric Poshomill',
     category: 'Posho Mills',
     price: 135000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556861/Combined_Electric_Poshomill._hpycl1.png',
     description: 'All-in-one commercial electric milling unit. Integrated huller and hammer mill driven by a powerful electric motor, designed for premium sifted flour production in single-pass.',
     specs: {
       'Huller Section': 'Combined iron-roller huller',
@@ -611,7 +611,7 @@ export const PRODUCTS: Product[] = [
     name: 'Duo Combined Poshomill',
     category: 'Posho Mills',
     price: 165000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784554969/Duo_Poshomill_2_rogbta.png',
     description: 'Double hopper combined poshomill powered by an independent petrol/diesel engine. Offers ultimate versatility with dual separate processing lines for grain hulling and fine grinding.',
     specs: {
       'Hoppers': 'Dual input steel hoppers',
@@ -627,7 +627,7 @@ export const PRODUCTS: Product[] = [
     name: 'GM 25 Indian Combined Posho Mill (10HP)',
     category: 'Posho Mills',
     price: 220000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: 'Heavy duty GM 25 Indian combined poshomill with a premium 10HP engine. The choice of commercial grain mills, designed to run 12+ hours daily in highly demanding off-grid centres.',
     specs: {
       'Chamber Model': 'GM 25 Heavy-duty casting',
@@ -643,7 +643,7 @@ export const PRODUCTS: Product[] = [
     name: 'Duo Poshomill',
     category: 'Posho Mills',
     price: 115000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784554969/Duo_Poshomill_2_rogbta.png',
     description: 'Double chamber electric poshomill. Built with dual separate hammer milling heads driven by a single high-torque motor, allowing synchronized milling of different grain types.',
     specs: {
       'Heads': 'Dual separate cast-iron grinding heads',
@@ -659,7 +659,7 @@ export const PRODUCTS: Product[] = [
     name: 'Electric Poshomill',
     category: 'Posho Mills',
     price: 75000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'Standard electric poshomill powered by a 5HP single-phase motor. A reliable and highly economical option for local neighborhood posho mills in Nakuru estate centres.',
     specs: {
       'Motor': '5HP Single-Phase Electric Motor (240V compatible)',
@@ -675,7 +675,7 @@ export const PRODUCTS: Product[] = [
     name: '10HP Electric Poshomill (Single Phase)',
     category: 'Posho Mills',
     price: 75000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'Single phase electric poshomill suitable for maize and any other grain. Features a highly effective 10 Horsepower motor for reliable estate-scale milling.',
     specs: {
       'Motor': '10 HP Single-Phase Electric Motor',
@@ -691,7 +691,7 @@ export const PRODUCTS: Product[] = [
     name: '7.5 HP Petrol Maize Sheller',
     category: 'Maize Shellers',
     price: 42500,
-    image: 'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553754/Diesel_powered_maize_sheller_pc3omv.png',
     description: 'Petrol-powered maize sheller equipped with a reliable 7.5 Horsepower engine. Delivers a clean output of 15 bags per hour, perfect for medium-sized farm harvests.',
     specs: {
       'Engine': '7.5 HP Petrol Engine',
@@ -707,7 +707,7 @@ export const PRODUCTS: Product[] = [
     name: '10 HP Combined Poshomill',
     category: 'Posho Mills',
     price: 130000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556861/Combined_Electric_Poshomill._hpycl1.png',
     description: 'Grade 1 and 2 combined poshomill powered by a high-torque 10 Horsepower electric motor. Offers efficient, high-output single-pass sifted flour production.',
     specs: {
       'Motor': '10 HP Electric Motor',
@@ -724,7 +724,7 @@ export const PRODUCTS: Product[] = [
     name: '7.5 HP Combined Poshomill',
     category: 'Posho Mills',
     price: 125000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556861/Combined_Electric_Poshomill._hpycl1.png',
     description: 'Grade 1 and 2 combined poshomill powered by a reliable 7.5 Horsepower electric motor. Perfect for estate-scale milling operations seeking single-pass sifting.',
     specs: {
       'Motor': '7.5 HP Electric Motor',
@@ -739,7 +739,7 @@ export const PRODUCTS: Product[] = [
     name: 'Petrol Animal Feed Chopper',
     category: 'Animal Feed Machines',
     price: 40000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784556218/7.5Hp_Petrol_Choppermill_fpxyob.png',
     description: 'Petrol-driven animal feed chopper designed for fast, efficient forage prep. Powered by a high-reliability petrol motor, ideal for Napier grass and silage cutting in the shamba.',
     specs: {
       'Engine': 'Petrol Driven Motor',
@@ -754,7 +754,7 @@ export const PRODUCTS: Product[] = [
     name: 'Diesel Animal Feed Chopper',
     category: 'Animal Feed Machines',
     price: 70000,
-    image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553481/Diesel_choppermills_jkezf2.png',
     description: 'Heavy-duty diesel-powered animal feed chopper. Built for commercial forage yards and large-scale dairy shambas seeking maximum fuel economy and high throughput.',
     specs: {
       'Engine': 'Diesel Powered Motor',
@@ -769,7 +769,7 @@ export const PRODUCTS: Product[] = [
     name: '7.5 HP Electric Poshomill',
     category: 'Posho Mills',
     price: 72500,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784554766/Electric_Poshomill._uuzxkl.png',
     description: '7.5 Horsepower electric poshomill delivering a solid output of 4 bags per hour. Ideal for estate-level commercial milling with standard industrial single-phase power.',
     specs: {
       'Motor': '7.5 HP Electric Motor',
@@ -784,7 +784,7 @@ export const PRODUCTS: Product[] = [
     name: 'Commercial Roller Mill',
     category: 'Roller Mills',
     price: 400000,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784554146/Unga_ya_Jogoo_Rollermills_mvu2ri.png',
     description: 'Heavy duty commercial roller mill optimized for producing premium Grade 1 sifted flour. Delivers quiet, highly efficient grain crushing between high-pressure rollers.',
     specs: {
       'Output Quality': 'Grade 1 Sifted Flour',
@@ -799,7 +799,7 @@ export const PRODUCTS: Product[] = [
     name: 'Standard Animal Feed Mixer',
     category: 'Animal Feed Machines',
     price: 100000,
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553199/Duo_Choppermill_hpq5b9.png',
     description: 'Reliable animal feed mixer designed to achieve perfectly homogeneous blends of mineral concentrates, grains, and chaff. Cost-effective and highly durable.',
     specs: {
       'Price Point': 'Extremely cost-effective feed prep solution',
@@ -814,7 +814,7 @@ export const PRODUCTS: Product[] = [
     name: '10 HP Diesel Poshomill',
     category: 'Posho Mills',
     price: 140000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: '10 Horsepower diesel poshomill built for continuous off-grid operation. Delivers reliable, fuel-efficient commercial hammer-milling in rural market centres.',
     specs: {
       'Engine': '10 HP Diesel Engine',
@@ -829,7 +829,7 @@ export const PRODUCTS: Product[] = [
     name: 'Compact Hybrid Poshomill',
     category: 'Posho Mills',
     price: 100000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Highly cost-effective compact hybrid poshomill. Can be driven by either a diesel engine or an electric motor, giving you complete flexibility when power grids fail.',
     specs: {
       'Drive': 'Dual-belt diesel and electric compatible drive',
@@ -843,7 +843,7 @@ export const PRODUCTS: Product[] = [
     name: '3 Phase Electric Poshomill',
     category: 'Posho Mills',
     price: 100000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551529/Electric_poshomill_sggnvh.png',
     description: 'Heavy duty 3 phase electric poshomill designed for industrial and commercial milling zones with stable industrial power supply.',
     specs: {
       'Power Source': '3 Phase Electric Motor',
@@ -858,7 +858,7 @@ export const PRODUCTS: Product[] = [
     name: 'Andimax 10 HP Poshomill',
     category: 'Posho Mills',
     price: 145000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: '10 Horsepower Andimax poshomill featuring a radiator-cooled diesel engine for continuous, high-temperature operations in hot climates.',
     specs: {
       'Engine': '10 HP Andimax Diesel Engine',
@@ -873,7 +873,7 @@ export const PRODUCTS: Product[] = [
     name: 'Hybrid Grain Milling Machine (450kg/h)',
     category: 'Posho Mills',
     price: 185000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Clean, effective, and highly affordable hybrid milling machine. Capable of processing 250-450 kg of grains per hour. Grinds maize, wheat, and other consumables to fine flour.',
     specs: {
       'Capacity': '250 - 450 Kg per Hour',
@@ -889,7 +889,7 @@ export const PRODUCTS: Product[] = [
     name: 'Small Scale Maize Poshomill and Peeler',
     category: 'Posho Mills',
     price: 115000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Affordable, small-scale equipment designed for both milling and peeling grains. Extremely effective and reaches speeds of up to 300 kg per hour.',
     specs: {
       'Capacity': 'Up to 300 Kg per Hour',
@@ -904,7 +904,7 @@ export const PRODUCTS: Product[] = [
     name: '10HP JD Poshomill',
     category: 'Posho Mills',
     price: 85000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: 'The JD 10HP poshomill — a trusted workhorse for busy market-centre milling businesses. Produces clean Grade 2 (Unga No. 2) flour reliably, shift after shift, at an excellent price point.',
     specs: {
       'Model': 'JD Series',
@@ -922,7 +922,7 @@ export const PRODUCTS: Product[] = [
     name: '10HP GM22 Poshomill',
     category: 'Posho Mills',
     price: 75000,
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551689/Diesel_poshomills_qr0d6z.jpg',
     description: 'The GM22 10HP poshomill — a popular and affordable entry into commercial-grade milling. Produces standard Grade 2 (Unga No. 2) flour with low running costs and minimal maintenance.',
     specs: {
       'Model': 'GM22 Series',
@@ -939,7 +939,7 @@ export const PRODUCTS: Product[] = [
     name: 'Diesel Powered Maize Sheller',
     category: 'Maize Shellers',
     price: 95000,
-    image: 'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784553754/Diesel_powered_maize_sheller_pc3omv.png',
     description: 'High-output diesel maize sheller delivering a clean 35 bags per hour. Ideal for large-scale harvest operations in off-grid farms where electricity is unavailable.',
     specs: {
       'Power Source': 'Diesel Engine',
@@ -957,7 +957,7 @@ export const PRODUCTS: Product[] = [
     name: '12 Stones Maize Huller',
     category: 'Hullers',
     price: 120000,
-    image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784552307/Combined_diesel_and_electric_Poshomill_2_z29ht7.png',
     description: 'Large-scale 12-stone maize huller powered by a 10HP motor. Designed for high-volume muthokoi production and for prepping maize to Grade 1 flour quality. The industry choice for large cooperatives and commercial mills.',
     specs: {
       'Motor': '10HP Electric Motor',
@@ -974,7 +974,7 @@ export const PRODUCTS: Product[] = [
     name: '9HP Petrol Speed Chaffcutter (Metallic Conveyor)',
     category: 'Chaffcutters',
     price: 95000,
-    image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784551967/electric_Chuffcutter_ys1egh.png',
     description: 'High-speed petrol chaffcutter equipped with a robust metallic conveyor belt feed system. Processes 2 tonnes of Napier grass per hour with zero manual feeding — the fastest chaffcutter in our lineup.',
     specs: {
       'Engine': '9HP Petrol Engine',
@@ -992,7 +992,7 @@ export const PRODUCTS: Product[] = [
     name: '6Fy-35 Unga ya Jogoo Rollermill',
     category: 'Roller Mills',
     price: 370000,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800',
+    image: 'https://res.cloudinary.com/dhxkhdrlr/image/upload/v1784554146/Unga_ya_Jogoo_Rollermills_mvu2ri.png',
     description: 'The original Unga ya Jogoo 6Fy-35 rollermill — the gold standard for Grade 1 sifted flour production in Kenya. If you want to produce premium white flour that commands top prices at market, this is the machine.',
     specs: {
       'Model': '6Fy-35 Series Rollermill',

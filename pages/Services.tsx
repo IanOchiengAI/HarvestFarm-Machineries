@@ -1,10 +1,12 @@
 import React from 'react';
-import { Truck, Wrench, CreditCard, MapPin } from 'lucide-react';
+import { Truck, Wrench, CreditCard, MapPin, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { canonicalUrl } from '../seo';
+import { useData } from '../store/DataContext';
 
 const Services: React.FC = () => {
+  const { settings } = useData();
   const values = [
     { name: 'Reliability', desc: 'We provide dependable machinery that farmers can count on.' },
     { name: 'Innovation', desc: 'We continuously seek ways to improve our products and services.' },
@@ -127,6 +129,24 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* WhatsApp CTA */}
+      <section className="py-20 bg-harvest-brown text-white text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-black mb-4">Ready to Get Started?</h2>
+          <p className="text-white/70 mb-8 max-w-lg mx-auto font-medium">
+            Talk to Ian directly on WhatsApp — get honest advice, pricing, and delivery timelines for your county.
+          </p>
+          <a
+            href={settings.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-[#25D366] text-white font-black px-10 py-5 rounded-2xl hover:bg-green-600 transition-all uppercase tracking-widest text-sm shadow-xl hover:-translate-y-1"
+          >
+            <MessageCircle size={18} fill="white" /> WhatsApp Ian Now
+          </a>
+        </div>
+      </section>
     </div>
   );
 };

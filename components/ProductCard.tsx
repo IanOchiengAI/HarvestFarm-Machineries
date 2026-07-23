@@ -11,7 +11,6 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { settings } = useData();
-  const hasRealPhoto = product.image.startsWith('/');
 
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -38,9 +37,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             MADE TO ORDER
           </span>
         )}
-        <span className={`${hasRealPhoto ? 'bg-harvest-green' : 'bg-harvest-brown'} absolute bottom-2 left-2 text-white text-[10px] font-black px-2 py-1 rounded z-10 shadow-sm uppercase tracking-wider`}>
-          {hasRealPhoto ? 'Actual photo' : 'Photo on request'}
-        </span>
         <img 
           src={product.image} 
           alt={`${product.name} - angle view`} 

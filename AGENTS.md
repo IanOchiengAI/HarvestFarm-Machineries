@@ -52,8 +52,8 @@ This project uses the **3-Layer Architecture**:
 
 | Resource | Value |
 |----------|-------|
-| Phone | +254780037335 |
-| WhatsApp | wa.me/254780037335 |
+| Phone | +254713812392 |
+| WhatsApp | wa.me/254713812392 |
 | Location | Nakuru CBD, Kenya |
 | Email | info@harvestfarm.co.ke / sales@harvestfarm.co.ke |
 | AI Studio | https://ai.studio/apps/b9a1e9ca-6c46-4b49-af18-6e3dde8d8ae2 |
