@@ -2,8 +2,9 @@ export const config = {
   runtime: 'edge',
 };
 
+// No Access-Control-Allow-Origin: the chatbot calls this same-origin, so other websites
+// can't use the Groq quota from their visitors' browsers (security sweep 2026-09-26).
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
