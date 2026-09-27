@@ -40,3 +40,7 @@ token.json
 # .claude/settings.json     # Team settings (official Claude Code)
 # .claude/commands/         # Team slash commands (official Claude Code)
 # .claude/.plans/           # Project documentation (extension-specific)
+
+# Env files (keep the example). Added by security sweep 2026-09-26.
+.env*
+!.env.example
